@@ -1,0 +1,45 @@
+{
+    "id": "approveform",
+    "schemaVersion": "1.1.0",
+    "name": "ApproveForm",
+    "revision": "1.0",
+    "type": "task",
+    "readOnly": false,
+    "content": [
+        {
+            "id": "requestor",
+            "type": "section",
+            "title": "Requestor",
+            "content": [
+                {
+                    "id": "name",
+                    "type": "string",
+                    "label": "Name",
+                    "readOnly": true,
+                    "value": "${context.initialData.requestor}",
+                    "constraints": {
+                        "required": false
+                    }
+                }
+            ]
+        },
+        {
+            "id": "requested_objects",
+            "type": "section",
+            "title": "Requested objects",
+            "content": []
+        }
+    ],
+    "decisions": [
+        {
+            "id": "approve",
+            "text": "Approve",
+            "decisionType": "positive"
+        },
+        {
+            "id": "decline",
+            "text": "Decline",
+            "decisionType": "negative"
+        }
+    ]
+}
